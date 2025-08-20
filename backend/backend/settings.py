@@ -103,3 +103,10 @@ if DEBUG:
     # Solo para desarrollo, permite ver la toolbar
     import socket
     INTERNAL_IPS += [f"{ip}:8000" for ip in socket.gethostbyname_ex(socket.gethostname())[2]]
+    
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Cine API",
+    "DESCRIPTION": "API v1 para gestión de películas, sesiones y entradas.",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,  # oculta el endpoint del propio schema en la UI
+}
