@@ -1,0 +1,332 @@
+[
+  {
+    "model": "cine.pelicula",
+    "pk": 1,
+    "fields": {
+      "titulo": "Inception",
+      "descripcion": "",
+      "duracion_min": 148,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/inception.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 2,
+    "fields": {
+      "titulo": "Interstellar",
+      "descripcion": "",
+      "duracion_min": 169,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/interstellar.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 3,
+    "fields": {
+      "titulo": "The Dark Knight",
+      "descripcion": "",
+      "duracion_min": 152,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/the-dark-knight.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 4,
+    "fields": {
+      "titulo": "Tenet",
+      "descripcion": "",
+      "duracion_min": 150,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/tenet.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 5,
+    "fields": {
+      "titulo": "Dune: Part One",
+      "descripcion": "",
+      "duracion_min": 155,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/dune-part-one.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 6,
+    "fields": {
+      "titulo": "Dune: Part Two",
+      "descripcion": "",
+      "duracion_min": 166,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/dune-part-two.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 7,
+    "fields": {
+      "titulo": "Oppenheimer",
+      "descripcion": "",
+      "duracion_min": 180,
+      "clasificacion": "+16",
+      "poster_url": "https://example.com/posters/oppenheimer.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 8,
+    "fields": {
+      "titulo": "Barbie",
+      "descripcion": "",
+      "duracion_min": 114,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/barbie.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 9,
+    "fields": {
+      "titulo": "Avatar",
+      "descripcion": "",
+      "duracion_min": 162,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/avatar.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 10,
+    "fields": {
+      "titulo": "Avatar: The Way of Water",
+      "descripcion": "",
+      "duracion_min": 192,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/avatar-the-way-of-water.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 11,
+    "fields": {
+      "titulo": "Spider-Man: No Way Home",
+      "descripcion": "",
+      "duracion_min": 148,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/spiderman-no-way-home.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 12,
+    "fields": {
+      "titulo": "Guardians of the Galaxy Vol. 3",
+      "descripcion": "",
+      "duracion_min": 150,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/guardians-of-the-galaxy-vol-3.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 13,
+    "fields": {
+      "titulo": "The Batman",
+      "descripcion": "",
+      "duracion_min": 176,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/the-batman.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 14,
+    "fields": {
+      "titulo": "Joker",
+      "descripcion": "",
+      "duracion_min": 122,
+      "clasificacion": "+16",
+      "poster_url": "https://example.com/posters/joker.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 15,
+    "fields": {
+      "titulo": "Parasite",
+      "descripcion": "",
+      "duracion_min": 132,
+      "clasificacion": "+16",
+      "poster_url": "https://example.com/posters/parasite.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 16,
+    "fields": {
+      "titulo": "La La Land",
+      "descripcion": "",
+      "duracion_min": 128,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/la-la-land.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 17,
+    "fields": {
+      "titulo": "Whiplash",
+      "descripcion": "",
+      "duracion_min": 106,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/whiplash.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 18,
+    "fields": {
+      "titulo": "Mad Max: Fury Road",
+      "descripcion": "",
+      "duracion_min": 120,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/mad-max-fury-road.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 19,
+    "fields": {
+      "titulo": "Everything Everywhere All at Once",
+      "descripcion": "",
+      "duracion_min": 139,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/everything-everywhere-all-at-once.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 20,
+    "fields": {
+      "titulo": "The Matrix",
+      "descripcion": "",
+      "duracion_min": 136,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/the-matrix.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 21,
+    "fields": {
+      "titulo": "The Fellowship of the Ring",
+      "descripcion": "",
+      "duracion_min": 178,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/the-fellowship-of-the-ring.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 22,
+    "fields": {
+      "titulo": "The Two Towers",
+      "descripcion": "",
+      "duracion_min": 179,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/the-two-towers.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 23,
+    "fields": {
+      "titulo": "The Return of the King",
+      "descripcion": "",
+      "duracion_min": 201,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/the-return-of-the-king.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 24,
+    "fields": {
+      "titulo": "Toy Story",
+      "descripcion": "",
+      "duracion_min": 81,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/toy-story.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 25,
+    "fields": {
+      "titulo": "Inside Out",
+      "descripcion": "",
+      "duracion_min": 95,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/inside-out.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 26,
+    "fields": {
+      "titulo": "Coco",
+      "descripcion": "",
+      "duracion_min": 105,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/coco.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 27,
+    "fields": {
+      "titulo": "Soul",
+      "descripcion": "",
+      "duracion_min": 100,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/soul.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 28,
+    "fields": {
+      "titulo": "Her",
+      "descripcion": "",
+      "duracion_min": 126,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/her.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 29,
+    "fields": {
+      "titulo": "Arrival",
+      "descripcion": "",
+      "duracion_min": 116,
+      "clasificacion": "TP",
+      "poster_url": "https://example.com/posters/arrival.jpg"
+    }
+  },
+  {
+    "model": "cine.pelicula",
+    "pk": 30,
+    "fields": {
+      "titulo": "Gravity",
+      "descripcion": "",
+      "duracion_min": 91,
+      "clasificacion": "+12",
+      "poster_url": "https://example.com/posters/gravity.jpg"
+    }
+  }
+]

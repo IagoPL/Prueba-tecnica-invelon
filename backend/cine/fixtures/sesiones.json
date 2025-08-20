@@ -1,0 +1,794 @@
+[
+  {
+    "model": "cine.sesion",
+    "pk": 1,
+    "fields": {
+      "pelicula": 24,
+      "inicio": "2025-08-20T22:30:00Z",
+      "sala": "Sala 1",
+      "filas": 9,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 2,
+    "fields": {
+      "pelicula": 29,
+      "inicio": "2025-08-20T16:30:00Z",
+      "sala": "Sala 2",
+      "filas": 12,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 3,
+    "fields": {
+      "pelicula": 22,
+      "inicio": "2025-08-20T16:30:00Z",
+      "sala": "Sala 3",
+      "filas": 9,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 4,
+    "fields": {
+      "pelicula": 26,
+      "inicio": "2025-08-20T22:30:00Z",
+      "sala": "Sala 2",
+      "filas": 10,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 5,
+    "fields": {
+      "pelicula": 30,
+      "inicio": "2025-08-20T18:30:00Z",
+      "sala": "Sala 2",
+      "filas": 9,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 6,
+    "fields": {
+      "pelicula": 16,
+      "inicio": "2025-08-20T22:30:00Z",
+      "sala": "Sala 3",
+      "filas": 12,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 7,
+    "fields": {
+      "pelicula": 27,
+      "inicio": "2025-08-20T20:00:00Z",
+      "sala": "Sala 4",
+      "filas": 11,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 8,
+    "fields": {
+      "pelicula": 11,
+      "inicio": "2025-08-20T22:30:00Z",
+      "sala": "Sala 4",
+      "filas": 9,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 9,
+    "fields": {
+      "pelicula": 11,
+      "inicio": "2025-08-21T20:00:00Z",
+      "sala": "Sala 1",
+      "filas": 11,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 10,
+    "fields": {
+      "pelicula": 13,
+      "inicio": "2025-08-21T14:30:00Z",
+      "sala": "Sala 2",
+      "filas": 11,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 11,
+    "fields": {
+      "pelicula": 13,
+      "inicio": "2025-08-21T22:30:00Z",
+      "sala": "Sala 2",
+      "filas": 9,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 12,
+    "fields": {
+      "pelicula": 7,
+      "inicio": "2025-08-21T16:30:00Z",
+      "sala": "Sala 1",
+      "filas": 11,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 13,
+    "fields": {
+      "pelicula": 1,
+      "inicio": "2025-08-21T16:30:00Z",
+      "sala": "Sala 5",
+      "filas": 9,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 14,
+    "fields": {
+      "pelicula": 13,
+      "inicio": "2025-08-21T22:30:00Z",
+      "sala": "Sala 1",
+      "filas": 11,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 15,
+    "fields": {
+      "pelicula": 16,
+      "inicio": "2025-08-21T18:30:00Z",
+      "sala": "Sala 1",
+      "filas": 9,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 16,
+    "fields": {
+      "pelicula": 16,
+      "inicio": "2025-08-21T20:00:00Z",
+      "sala": "Sala 3",
+      "filas": 10,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 17,
+    "fields": {
+      "pelicula": 18,
+      "inicio": "2025-08-21T18:30:00Z",
+      "sala": "Sala 2",
+      "filas": 10,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 18,
+    "fields": {
+      "pelicula": 25,
+      "inicio": "2025-08-21T16:30:00Z",
+      "sala": "Sala 3",
+      "filas": 12,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 19,
+    "fields": {
+      "pelicula": 1,
+      "inicio": "2025-08-21T18:30:00Z",
+      "sala": "Sala 5",
+      "filas": 12,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 20,
+    "fields": {
+      "pelicula": 16,
+      "inicio": "2025-08-22T14:30:00Z",
+      "sala": "Sala 3",
+      "filas": 11,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 21,
+    "fields": {
+      "pelicula": 11,
+      "inicio": "2025-08-22T22:30:00Z",
+      "sala": "Sala 4",
+      "filas": 9,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 22,
+    "fields": {
+      "pelicula": 1,
+      "inicio": "2025-08-22T18:30:00Z",
+      "sala": "Sala 1",
+      "filas": 12,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 23,
+    "fields": {
+      "pelicula": 3,
+      "inicio": "2025-08-22T18:30:00Z",
+      "sala": "Sala 2",
+      "filas": 10,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 24,
+    "fields": {
+      "pelicula": 22,
+      "inicio": "2025-08-22T20:00:00Z",
+      "sala": "Sala 1",
+      "filas": 10,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 25,
+    "fields": {
+      "pelicula": 27,
+      "inicio": "2025-08-22T22:30:00Z",
+      "sala": "Sala 5",
+      "filas": 10,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 26,
+    "fields": {
+      "pelicula": 13,
+      "inicio": "2025-08-22T14:30:00Z",
+      "sala": "Sala 4",
+      "filas": 9,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 27,
+    "fields": {
+      "pelicula": 30,
+      "inicio": "2025-08-22T18:30:00Z",
+      "sala": "Sala 5",
+      "filas": 11,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 28,
+    "fields": {
+      "pelicula": 17,
+      "inicio": "2025-08-23T22:30:00Z",
+      "sala": "Sala 5",
+      "filas": 11,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 29,
+    "fields": {
+      "pelicula": 17,
+      "inicio": "2025-08-23T20:00:00Z",
+      "sala": "Sala 2",
+      "filas": 10,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 30,
+    "fields": {
+      "pelicula": 24,
+      "inicio": "2025-08-23T16:30:00Z",
+      "sala": "Sala 1",
+      "filas": 9,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 31,
+    "fields": {
+      "pelicula": 29,
+      "inicio": "2025-08-23T16:30:00Z",
+      "sala": "Sala 5",
+      "filas": 11,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 32,
+    "fields": {
+      "pelicula": 9,
+      "inicio": "2025-08-23T14:30:00Z",
+      "sala": "Sala 4",
+      "filas": 11,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 33,
+    "fields": {
+      "pelicula": 29,
+      "inicio": "2025-08-23T22:30:00Z",
+      "sala": "Sala 4",
+      "filas": 10,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 34,
+    "fields": {
+      "pelicula": 13,
+      "inicio": "2025-08-23T20:00:00Z",
+      "sala": "Sala 3",
+      "filas": 11,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 35,
+    "fields": {
+      "pelicula": 3,
+      "inicio": "2025-08-23T20:00:00Z",
+      "sala": "Sala 4",
+      "filas": 9,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 36,
+    "fields": {
+      "pelicula": 7,
+      "inicio": "2025-08-23T18:30:00Z",
+      "sala": "Sala 2",
+      "filas": 10,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 37,
+    "fields": {
+      "pelicula": 21,
+      "inicio": "2025-08-24T14:30:00Z",
+      "sala": "Sala 2",
+      "filas": 10,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 38,
+    "fields": {
+      "pelicula": 20,
+      "inicio": "2025-08-24T22:30:00Z",
+      "sala": "Sala 1",
+      "filas": 9,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 39,
+    "fields": {
+      "pelicula": 23,
+      "inicio": "2025-08-24T16:30:00Z",
+      "sala": "Sala 1",
+      "filas": 12,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 40,
+    "fields": {
+      "pelicula": 12,
+      "inicio": "2025-08-24T20:00:00Z",
+      "sala": "Sala 1",
+      "filas": 9,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 41,
+    "fields": {
+      "pelicula": 22,
+      "inicio": "2025-08-24T14:30:00Z",
+      "sala": "Sala 4",
+      "filas": 12,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 42,
+    "fields": {
+      "pelicula": 12,
+      "inicio": "2025-08-24T20:00:00Z",
+      "sala": "Sala 5",
+      "filas": 12,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 43,
+    "fields": {
+      "pelicula": 11,
+      "inicio": "2025-08-24T16:30:00Z",
+      "sala": "Sala 3",
+      "filas": 10,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 44,
+    "fields": {
+      "pelicula": 13,
+      "inicio": "2025-08-24T18:30:00Z",
+      "sala": "Sala 5",
+      "filas": 10,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 45,
+    "fields": {
+      "pelicula": 13,
+      "inicio": "2025-08-24T22:30:00Z",
+      "sala": "Sala 2",
+      "filas": 9,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 46,
+    "fields": {
+      "pelicula": 19,
+      "inicio": "2025-08-25T22:30:00Z",
+      "sala": "Sala 1",
+      "filas": 12,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 47,
+    "fields": {
+      "pelicula": 23,
+      "inicio": "2025-08-25T16:30:00Z",
+      "sala": "Sala 1",
+      "filas": 11,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 48,
+    "fields": {
+      "pelicula": 19,
+      "inicio": "2025-08-25T22:30:00Z",
+      "sala": "Sala 4",
+      "filas": 12,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 49,
+    "fields": {
+      "pelicula": 2,
+      "inicio": "2025-08-25T18:30:00Z",
+      "sala": "Sala 2",
+      "filas": 11,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 50,
+    "fields": {
+      "pelicula": 1,
+      "inicio": "2025-08-25T22:30:00Z",
+      "sala": "Sala 5",
+      "filas": 10,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 51,
+    "fields": {
+      "pelicula": 24,
+      "inicio": "2025-08-25T22:30:00Z",
+      "sala": "Sala 3",
+      "filas": 12,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 52,
+    "fields": {
+      "pelicula": 18,
+      "inicio": "2025-08-25T20:00:00Z",
+      "sala": "Sala 4",
+      "filas": 10,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 53,
+    "fields": {
+      "pelicula": 18,
+      "inicio": "2025-08-25T14:30:00Z",
+      "sala": "Sala 5",
+      "filas": 9,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 54,
+    "fields": {
+      "pelicula": 28,
+      "inicio": "2025-08-25T14:30:00Z",
+      "sala": "Sala 3",
+      "filas": 10,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 55,
+    "fields": {
+      "pelicula": 20,
+      "inicio": "2025-08-25T16:30:00Z",
+      "sala": "Sala 2",
+      "filas": 11,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 56,
+    "fields": {
+      "pelicula": 17,
+      "inicio": "2025-08-26T20:00:00Z",
+      "sala": "Sala 3",
+      "filas": 9,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 57,
+    "fields": {
+      "pelicula": 27,
+      "inicio": "2025-08-26T20:00:00Z",
+      "sala": "Sala 2",
+      "filas": 10,
+      "columnas": 14
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 58,
+    "fields": {
+      "pelicula": 16,
+      "inicio": "2025-08-26T18:30:00Z",
+      "sala": "Sala 4",
+      "filas": 10,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 59,
+    "fields": {
+      "pelicula": 10,
+      "inicio": "2025-08-26T20:00:00Z",
+      "sala": "Sala 1",
+      "filas": 12,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 60,
+    "fields": {
+      "pelicula": 15,
+      "inicio": "2025-08-26T14:30:00Z",
+      "sala": "Sala 4",
+      "filas": 9,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 61,
+    "fields": {
+      "pelicula": 17,
+      "inicio": "2025-08-26T20:00:00Z",
+      "sala": "Sala 5",
+      "filas": 11,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 62,
+    "fields": {
+      "pelicula": 14,
+      "inicio": "2025-08-26T16:30:00Z",
+      "sala": "Sala 5",
+      "filas": 9,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 63,
+    "fields": {
+      "pelicula": 2,
+      "inicio": "2025-08-26T14:30:00Z",
+      "sala": "Sala 5",
+      "filas": 12,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 64,
+    "fields": {
+      "pelicula": 17,
+      "inicio": "2025-08-26T14:30:00Z",
+      "sala": "Sala 2",
+      "filas": 12,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 65,
+    "fields": {
+      "pelicula": 7,
+      "inicio": "2025-08-27T16:30:00Z",
+      "sala": "Sala 5",
+      "filas": 11,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 66,
+    "fields": {
+      "pelicula": 26,
+      "inicio": "2025-08-27T22:30:00Z",
+      "sala": "Sala 2",
+      "filas": 9,
+      "columnas": 12
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 67,
+    "fields": {
+      "pelicula": 8,
+      "inicio": "2025-08-27T14:30:00Z",
+      "sala": "Sala 3",
+      "filas": 10,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 68,
+    "fields": {
+      "pelicula": 17,
+      "inicio": "2025-08-27T18:30:00Z",
+      "sala": "Sala 1",
+      "filas": 12,
+      "columnas": 11
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 69,
+    "fields": {
+      "pelicula": 18,
+      "inicio": "2025-08-27T20:00:00Z",
+      "sala": "Sala 1",
+      "filas": 12,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 70,
+    "fields": {
+      "pelicula": 3,
+      "inicio": "2025-08-27T22:30:00Z",
+      "sala": "Sala 3",
+      "filas": 10,
+      "columnas": 13
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 71,
+    "fields": {
+      "pelicula": 10,
+      "inicio": "2025-08-27T16:30:00Z",
+      "sala": "Sala 4",
+      "filas": 12,
+      "columnas": 10
+    }
+  },
+  {
+    "model": "cine.sesion",
+    "pk": 72,
+    "fields": {
+      "pelicula": 24,
+      "inicio": "2025-08-27T22:30:00Z",
+      "sala": "Sala 5",
+      "filas": 10,
+      "columnas": 13
+    }
+  }
+]
