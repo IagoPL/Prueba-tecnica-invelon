@@ -7,7 +7,7 @@ from django.db import IntegrityError, transaction
 from django.db.models import Count, Q, F
 from django.utils import timezone
 
-from rest_framework import viewsets, mixins, status, filters
+from rest_framework import viewsets, mixins, status, filters, serializers
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
@@ -169,10 +169,7 @@ class EntradaViewSet(
     ordering = ("-creada_en",)
 
     def get_queryset(self):
-        return (
-            Entrada.objects.select_related("sesion", "sesion__pelicula")
-            .all()
-        )
+        return Entrada.objects.select_related("sesion", "sesion__pelicula").all()
 
     @transaction.atomic
     def create(self, request, *args, **kwargs):
@@ -182,11 +179,19 @@ class EntradaViewSet(
         """
         try:
             return super().create(request, *args, **kwargs)
+        except serializers.ValidationError as e:
+            # UniqueTogetherValidator → ValidationError con non_field_errors
+            detail = e.detail
+            if isinstance(detail, dict) and "non_field_errors" in detail:
+                msgs = [str(m) for m in detail["non_field_errors"]]
+                msg = msgs[0] if msgs else "Asiento ya reservado o pagado para esa sesión."
+                return Response({"detail": msg}, status=status.HTTP_409_CONFLICT)
+            raise
         except IntegrityError:
-            # En proyectos con múltiples constraints podrías inspeccionar e.__cause__
-            # y solo mapear a 409 cuando el nombre = 'unique_asiento_por_sesion'.
-            return Response({"detail": "Asiento ya reservado o pagado para esa sesión."},
-                            status=status.HTTP_409_CONFLICT)
+            return Response(
+                {"detail": "Asiento ya reservado o pagado para esa sesión."},
+                status=status.HTTP_409_CONFLICT,
+            )
 
     @action(detail=True, methods=["post"])
     @transaction.atomic
@@ -197,12 +202,10 @@ class EntradaViewSet(
         """
         entrada: Entrada = self.get_object()
 
-        # Si ya está pagada, devolvemos tal cual
         if entrada.estado == TicketStatus.PAGADA:
             serializer = self.get_serializer(entrada)
             return Response(serializer.data, status=status.HTTP_200_OK)
 
-        # Marcamos pagada y guardamos (el modelo valida y normaliza)
         entrada.estado = TicketStatus.PAGADA
         entrada.save(update_fields=["estado"])
         serializer = self.get_serializer(entrada)
