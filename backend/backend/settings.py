@@ -5,7 +5,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-d+8usesgu_o+%6w$dm+^p92(*ag(z#$c#v7*9r1l=^lq1xs^sy'
 DEBUG = True
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "agents-psychological-rich-attractions.trycloudflare.com"]
+CSRF_TRUSTED_ORIGINS = ["https://agents-psychological-rich-attractions.trycloudflare.com"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -22,6 +23,7 @@ INSTALLED_APPS = [
     "django_filters",
     "drf_spectacular",
     "corsheaders",
+    
 ]
 
 # Activa debug_toolbar solo si DEBUG
@@ -96,6 +98,14 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 25,
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+        "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",  # para el admin
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ],
+    
 }
 
 INTERNAL_IPS = ["127.0.0.1", "localhost"]

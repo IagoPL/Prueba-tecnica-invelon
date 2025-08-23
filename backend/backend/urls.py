@@ -9,17 +9,18 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from rest_framework.routers import DefaultRouter
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView  # opcional: puedes dejarlo
 
 from cine.views import PeliculaViewSet, SesionViewSet, EntradaViewSet
 
 
-# ---- Admin branding (opcional) ----
+# ---- Admin branding ----
 admin.site.site_header = "Cine — Administración"
 admin.site.site_title = "Cine Admin"
 admin.site.index_title = "Panel de control"
 
 
-# ---- Health check muy simple (sin cache) ----
+# ---- Health (sin caché) ----
 @never_cache
 def health_view(_request):
     return JsonResponse({"status": "ok"})
@@ -37,11 +38,14 @@ urlpatterns = [
     # API v1
     path("api/v1/", include(router_v1.urls)),
     path("api/v1/health/", health_view, name="api-health"),
+
+    # JWT (opcional; puedes dejarlos por si quieres probar con auth)
+    path("api/v1/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/v1/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]
 
 
-# ---- Documentación OpenAPI (opcional con drf-spectacular) ----
-# pip install drf-spectacular drf-spectacular[sidecar]
+# ---- Documentación OpenAPI (si está instalada) ----
 try:
     from drf_spectacular.views import (
         SpectacularAPIView,
@@ -50,9 +54,7 @@ try:
     )
 
     urlpatterns += [
-        # Esquema en JSON/YAML
         path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
-        # Swagger UI y ReDoc
         path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
         path("api/redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
     ]
@@ -69,5 +71,4 @@ if settings.DEBUG:
     except Exception:
         pass
 
-    # Servir media en local (no usar en producción)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

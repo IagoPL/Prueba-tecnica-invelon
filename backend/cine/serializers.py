@@ -175,3 +175,22 @@ class EntradaSerializer(ModelCleanErrorMixin, serializers.ModelSerializer):
                     {"non_field_errors": ["No se puede modificar el asiento de una entrada pagada."]}
                 )
         return super().update(instance, validated_data)
+
+# --- Registro de usuarios ---
+from django.contrib.auth import get_user_model
+from rest_framework import serializers as drf_serializers
+
+class RegisterSerializer(drf_serializers.ModelSerializer):
+    password = drf_serializers.CharField(write_only=True, min_length=8)
+
+    class Meta:
+        model = get_user_model()
+        fields = ("id", "username", "email", "password")
+
+    def create(self, validated_data):
+        # create_user ya hashea el password
+        return get_user_model().objects.create_user(
+            username=validated_data["username"],
+            email=validated_data.get("email", ""),
+            password=validated_data["password"],
+        )

@@ -1,16 +1,14 @@
 from __future__ import annotations
 
-from datetime import timedelta
-
 import django_filters
 from django.db import IntegrityError, transaction
-from django.db.models import Count, Q, F
+from django.db.models import Count, Q
 from django.utils import timezone
 
 from rest_framework import viewsets, mixins, status, filters, serializers
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny
 
 from .models import Pelicula, Sesion, Entrada, TicketStatus
 from .serializers import PeliculaSerializer, SesionSerializer, EntradaSerializer
@@ -53,9 +51,7 @@ class EntradaFilter(django_filters.FilterSet):
 # Películas
 # =========================
 class PeliculaViewSet(viewsets.ModelViewSet):
-    """
-    CRUD de películas.
-    """
+    """CRUD de películas."""
     queryset = Pelicula.objects.all()
     serializer_class = PeliculaSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
@@ -72,7 +68,7 @@ class SesionViewSet(viewsets.ModelViewSet):
     """
     CRUD de sesiones con métricas anotadas para rendimiento.
 
-    Endpoints extra:
+    Endpoint extra:
     - GET /sesiones/{id}/asientos?include=estado
       Devuelve el layout de asientos de la sesión.
       include=estado → devuelve 'estado' en lugar de booleano ocupado.
@@ -106,7 +102,6 @@ class SesionViewSet(viewsets.ModelViewSet):
         sesion: Sesion = self.get_object()
         include = request.query_params.get("include")
 
-        # Obtenemos ocupación en una query
         entradas_qs = Entrada.objects.filter(sesion=sesion).values_list("fila", "numero", "estado")
         if include == "estado":
             estado_map = {(fila, num): estado for (fila, num, estado) in entradas_qs}
@@ -120,18 +115,10 @@ class SesionViewSet(viewsets.ModelViewSet):
             for col in range(1, sesion.columnas + 1):
                 if include == "estado":
                     estado = estado_map.get((fila_letra, col), None)
-                    fila.append({
-                        "fila": fila_letra,
-                        "numero": col,
-                        "estado": estado or "libre",
-                    })
+                    fila.append({"fila": fila_letra, "numero": col, "estado": estado or "libre"})
                 else:
-                    fila.append({
-                        "fila": fila_letra,
-                        "numero": col,
-                        "ocupado": (fila_letra, col) in ocupados,
-                    })
-            layout.append(fila)
+                    fila.append({"fila": fila_letra, "numero": col, "ocupado": (fila_letra, col) in ocupados})
+            fila and layout.append(fila)
 
         return Response({
             "sesion": sesion.id,
@@ -139,12 +126,12 @@ class SesionViewSet(viewsets.ModelViewSet):
             "filas": sesion.filas,
             "columnas": sesion.columnas,
             "layout": layout,
-            "generado_en": timezone.now(),
+            "generado_en": timezone.now().isoformat(),
         })
 
 
 # =========================
-# Entradas
+# Entradas (Checkout invitado)
 # =========================
 class EntradaViewSet(
     mixins.CreateModelMixin,
@@ -154,14 +141,13 @@ class EntradaViewSet(
     viewsets.GenericViewSet,
 ):
     """
-    Gestión de entradas (reservas/pagos).
-
-    - POST /entradas/ crea una reserva.
+    Gestión de entradas (reservas/pagos) SIN autenticación:
+    - POST /entradas/  → crear reserva
       *Conflictos de asiento* → 409.
-    - POST /entradas/{id}/pagar marca como pagada (idempotente).
+    - POST /entradas/{id}/pagar → marcar como pagada (idempotente).
     """
     serializer_class = EntradaSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_classes = (AllowAny,)  # ← checkout como invitado
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
     filterset_class = EntradaFilter
     search_fields = ("email", "sesion__pelicula__titulo", "sesion__sala")
@@ -180,7 +166,7 @@ class EntradaViewSet(
         try:
             return super().create(request, *args, **kwargs)
         except serializers.ValidationError as e:
-            # UniqueTogetherValidator → ValidationError con non_field_errors
+            # UniqueTogetherValidator → ValidationError con non_field_errors: [...]
             detail = e.detail
             if isinstance(detail, dict) and "non_field_errors" in detail:
                 msgs = [str(m) for m in detail["non_field_errors"]]
@@ -196,10 +182,7 @@ class EntradaViewSet(
     @action(detail=True, methods=["post"])
     @transaction.atomic
     def pagar(self, request, pk=None):
-        """
-        Marca una entrada como PAGADA. Idempotente:
-        - Si ya estaba pagada, devuelve 200 con el recurso.
-        """
+        """Marca una entrada como PAGADA (idempotente)."""
         entrada: Entrada = self.get_object()
 
         if entrada.estado == TicketStatus.PAGADA:
